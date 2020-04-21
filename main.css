@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+
+form{
+	display: block;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+}
+
+legend{
+	font-size: 50px;
+}
+
+input{
+	margin-top: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+
+button{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: #666;
+}
