@@ -1,8 +1,8 @@
 // JavaScript Document
 //key: https://developer.nps.gov/api/v1/parks?stateCode=${city}&api_key=buvFtnCeh9v3RWlXVXSM5soBQgynNWJXhShlKvgk
 //data[i].url or .name or .description 
-function getParks(state){
-	const url = `https://developer.nps.gov/api/v1/parks?stateCode=${state}&api_key=buvFtnCeh9v3RWlXVXSM5soBQgynNWJXhShlKvgk`;
+function getParks(state, limit){
+	const url = `https://developer.nps.gov/api/v1/parks?stateCode=${state}&limit=${limit}&api_key=buvFtnCeh9v3RWlXVXSM5soBQgynNWJXhShlKvgk`;
 	
 	console.log(url);
 	
@@ -31,8 +31,10 @@ $("form").submit(e => {
 	
 	e.preventDefault();
 	
-	let state = $("#state").val().toUpperCase();
 	
+	let state = $("#state").val().toUpperCase();
+	let limit = $("#limit").val();
 	console.log(state);
-	getParks(state);
+	console.log(limit);
+	getParks(state, limit);
 });
